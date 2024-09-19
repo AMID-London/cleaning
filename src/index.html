@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ann Sb cleaning</title>
+    <title>Ann Sb Cleaning</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@400..900&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16589569252"
-    ></script>
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      header, footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+      }
+      section {
+        padding: 20px;
+      }
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @media (max-width: 768px) {
+        header, footer {
+          padding: 15px;
+        }
+        section {
+          padding: 15px;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        section {
+          padding: 30px;
+        }
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16589569252"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-
       gtag('config', 'AW-16589569252');
     </script>
-    <!-- Event snippet for Просмотр страницы conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -49,21 +76,55 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   </head>
 
   <body>
-    <include src="./partials/_header.html"></include>
-    <include src="./partials/_hero.html"></include>
-    <include src="./partials/_offers.html"></include>
-    <include src="./partials/_portfolio.html"></include>
-    <include src="./partials/_job.html"></include>
-    <include src="./partials/_reviews.html"></include>
-    <include src="./partials/_tips.html"></include>
-    <include src="./partials/_connection.html"></include>
-    <include src="./partials/_footer.html"></include>
-    <include src="./partials/order-modal.html"></include>
-    <include src="./partials/_cleaner.html"></include>
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
+    <header>
+      <h1>Ann Sb Cleaning</h1>
+      <nav>
+        <a href="#services">Послуги</a>
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </header>
+    
+    <section id="hero">
+      <h2>Ласкаво просимо до Ann Sb Cleaning!</h2>
+      <p>Наша команда забезпечить чистоту у вашому домі.</p>
+    </section>
+    
+    <section id="offers">
+      <h3>Наші пропозиції</h3>
+      <p>Опис пропозицій...</p>
+    </section>
+
+    <section id="portfolio">
+      <h3>Наше портфоліо</h3>
+      <p>Опис портфоліо...</p>
+    </section>
+
+    <section id="job">
+      <h3>Наша робота</h3>
+      <p>Опис роботи...</p>
+    </section>
+
+    <section id="reviews">
+      <h3>Відгуки</h3>
+      <p>Відгуки клієнтів...</p>
+    </section>
+
+    <section id="tips">
+      <h3>Поради</h3>
+      <p>Корисні поради...</p>
+    </section>
+
+    <section id="contact">
+      <h3>Контакти</h3>
+      <p>Контактна інформація...</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Ann Sb Cleaning. Усі права захищені.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script type="module" src="./index.js" defer></script>
   </body>
 </html>
