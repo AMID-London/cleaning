@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ann Sb cleaning</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
+    <style>
+        /* Основні стилі для великих екранів */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Адаптація для планшетів */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .hero-image {
+                height: 300px; /* Змінюйте розмір зображення на планшетах */
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* Адаптація для мобільних пристроїв */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .hero-image {
+                height: 200px; /* Зменшуємо висоту зображення на мобільних */
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .button {
+                width: 100%; /* Кнопки на мобільних пристроях розтягуються на всю ширину */
+                font-size: 16px;
+            }
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16589569252"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16589569252"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16589569252');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-16589569252');
     </script>
-    <!-- Event snippet for Просмотр страницы conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof url != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-          send_to: 'AW-16589569252/uYsGCKG7ybUZEOT5wuY9',
-          value: 1.0,
-          currency: 'GBP',
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <include src="./partials/_header.html"></include>
     <include src="./partials/_hero.html"></include>
     <include src="./partials/_offers.html"></include>
@@ -60,10 +89,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <include src="./partials/_footer.html"></include>
     <include src="./partials/order-modal.html"></include>
     <include src="./partials/_cleaner.html"></include>
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script type="module" src="./index.js" defer></script>
-  </body>
+</body>
 </html>
