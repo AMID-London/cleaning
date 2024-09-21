@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="./sass/index.scss" />
     <style>
-        /* Основні стилі для великих екранів */
+        /* Основні стилі для великих екранів (десктопи) */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -28,6 +28,29 @@
             padding: 20px;
         }
 
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: url('your-hero-image.jpg') center center/cover no-repeat;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
         /* Адаптація для планшетів */
         @media (max-width: 768px) {
             .container {
@@ -36,11 +59,15 @@
             }
 
             .hero-image {
-                height: 300px; /* Змінюйте розмір зображення на планшетах */
+                height: 300px; /* Зменшуємо висоту зображення на планшетах */
             }
 
             h1 {
-                font-size: 24px;
+                font-size: 24px; /* Менший розмір заголовків для планшетів */
+            }
+
+            .button {
+                font-size: 16px; /* Менші кнопки для планшетів */
             }
         }
 
@@ -56,11 +83,11 @@
             }
 
             h1 {
-                font-size: 18px;
+                font-size: 18px; /* Ще менший розмір заголовків для мобільних */
             }
 
             .button {
-                width: 100%; /* Кнопки на мобільних пристроях розтягуються на всю ширину */
+                width: 100%; /* Кнопки розтягуються на всю ширину */
                 font-size: 16px;
             }
         }
@@ -79,7 +106,12 @@
 
 <body>
     <include src="./partials/_header.html"></include>
-    <include src="./partials/_hero.html"></include>
+    <div class="hero-image"></div> <!-- Блок з головним зображенням -->
+    <div class="container">
+        <h1>Welcome to Ann Sb Cleaning</h1>
+        <p>Your text here...</p>
+        <button class="button">Order Now</button>
+    </div>
     <include src="./partials/_offers.html"></include>
     <include src="./partials/_portfolio.html"></include>
     <include src="./partials/_job.html"></include>
